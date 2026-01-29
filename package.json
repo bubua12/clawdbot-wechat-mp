@@ -1,0 +1,42 @@
+{
+  "name": "@bubua12/clawdbot-wechat-mp",
+  "version": "0.0.1",
+  "type": "module",
+  "private": false,
+  "description": "Clawdbot channel plugin for WeChat Official Account (公众号)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubua12/clawdbot-wechat-mp.git"
+  },
+  "files": [
+    "index.ts",
+    "src",
+    "clawdbot.plugin.json"
+  ],
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "clawdbot": ">=2026.1.24"
+  },
+  "clawdbot": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channel": {
+      "id": "wechat-mp",
+      "label": "WeChat MP",
+      "selectionLabel": "WeChat Official Account (公众号)",
+      "docsPath": "/channels/wechat-mp",
+      "docsLabel": "wechat-mp",
+      "blurb": "WeChat Official Account notifications.",
+      "order": 75
+    },
+    "install": {
+      "npmSpec": "@bubua12/clawdbot-wechat-mp",
+      "localPath": ".",
+      "defaultChoice": "npm"
+    }
+  }
+}
